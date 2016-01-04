@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Main</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:600italic,400&amp;subset=latin,cyrillic-ext,cyrillic,latin-ext,greek-ext,greek,vietnamese" rel="stylesheet">
+    <link href="/css/app.css" type="text/css" rel="stylesheet">
+    <link href="/js/vendor/bootstrap-4.0.0-alpha.2/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+  </head>
+  <body ng-app="app" ng-controller="MainCtrl">
+    <main>
+      <!-- start header-->
+      <header class="header">
+        <div data-maxheight="100%" data-fit="cover" class="fotorama">
+          <div data-img="/img/header.jpg">
+            <div class="container">
+              <h1>Т-72</h1>
+              <p>Базовый шаблон для верстки сайтов</p>
+            </div>
+          </div>
+        </div>
+        <form flex-container="row" flex-gutter="24">
+          <div flex-item="">
+            <lx-text-field label="Email" error="!emailValidation(textFields.email)">
+              <input type="email" ng-model="textFields.email">
+            </lx-text-field>
+          </div>
+          <div flex-item="">
+            <lx-text-field label="Coupon code">
+              <input type="text" ng-model="textFields.coupon">
+            </lx-text-field>
+          </div>
+        </form>
+      </header>
+      <!-- end header-->
+    </main>
+    <script src="/js/vendor/bootstrap-4.0.0-alpha.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

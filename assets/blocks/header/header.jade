@@ -1,0 +1,16 @@
+// start header
+//- Eugen Soloviov (suenot)
+header.header
+	.fotorama(data-maxheight="100%" data-fit="cover")
+		div(data-img="/img/header.jpg")
+			.container
+				h1 Т-72
+				p Базовый шаблон для верстки сайтов
+	form(flex-container="row", flex-gutter="24")
+		div(flex-item="")
+			lx-text-field(label="Email", error="!emailValidation(textFields.email)")
+				input(type="email", ng-model="textFields.email")
+		div(flex-item="")
+			lx-text-field(label="Coupon code")
+				input(type="text", ng-model="textFields.coupon")
+// end header

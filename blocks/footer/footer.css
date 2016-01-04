@@ -1,0 +1,19 @@
+.footer {
+  height: 130px;
+  background-color: rgba(52,52,52,0.9);
+}
+@media (max-width: 768px) {
+  .footer {
+    height: 165px;
+  }
+}
+.footer__wrap {
+  height: 130px;
+  display: flex;
+}
+.footer__blocks {
+  align-self: center;
+  height: 53px;
+  width: 100%;
+  position: relative;
+}
