@@ -17,15 +17,15 @@ var autoprefixerOptions = require('../utils/config').autoprefixer;
 
 src.styl = {
 	'files': [
-		'assets/**/**/*.styl',
-		'!assets/**/**/_*.styl'
+		'assets/**/**/**/*.styl',
+		'!assets/**/**/**/_*.styl'
 	],
 	'dest': '.'
 };
 
 gulp.task('styl', function() {
 	return gulp.src(src.styl.files)
-	.pipe(changed(src.styl.dest, {extension: '.css'}))
+	// .pipe(changed(src.styl.dest, {extension: '.css'}))
 	.pipe(plumber({errorHandler: onError}))
 	.pipe(stylus())
 	.pipe(gulpif(gutil.env.prefix, postcss([autoprefixer(autoprefixerOptions)])))
