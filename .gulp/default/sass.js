@@ -10,8 +10,10 @@ var browserSync = require('browser-sync');
 
 gulp.task('sass', function () {
 	gulp.src([
-		'assets/**/**/*.[sass,scss]',
-		'!assets/**/**/_*.[sass,scss]'
+		'assets/**/**/*.sass',
+		'assets/**/**/*.scss',
+		'!assets/**/**/_*.sass'
+		'!assets/**/**/_*.scss'
 	])
 	.pipe(sass().on('error', sass.logError))
 	.pipe(gulpif(gutil.env.prefix, postcss([autoprefixer(autoprefixerOptions)])))
