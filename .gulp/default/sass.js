@@ -12,7 +12,7 @@ gulp.task('sass', function () {
 	gulp.src([
 		'assets/**/**/*.sass',
 		'assets/**/**/*.scss',
-		'!assets/**/**/_*.sass'
+		'!assets/**/**/_*.sass',
 		'!assets/**/**/_*.scss'
 	])
 	.pipe(sass().on('error', sass.logError))
